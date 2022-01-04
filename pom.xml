@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <packaging>pom</packaging>
-
-	<parent>
+  <parent>
     <groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.2</version>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.6.2</version>
     <relativePath />
+    <!-- lookup parent from repository -->
   </parent>
 
   <groupId>com.example.common</groupId>
@@ -19,11 +18,12 @@
 
   <name>common-java</name>
   <!-- FIXME change it to the project's website -->
- <url>http://maven.apache.org</url>
+  <url>http://maven.apache.org</url>
   <modules>
-		<module>services</module>
+    <module>services</module>
     <module>util</module>
-	</modules>
+  </modules>
+  <packaging>pom</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,50 +33,40 @@
 
   <dependencies>
     <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-    
-    <dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
       <version>1.18.22</version>
-		</dependency>
+    </dependency>
 
-		<dependency>
-			<groupId>org.codehaus.groovy</groupId>
-			<artifactId>groovy-all</artifactId>
-			<version>3.0.9</version>
-			<type>pom</type>
-		</dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>3.0.9</version>
+      <type>pom</type>
+    </dependency>
   </dependencies>
 
   <dependencyManagement>
-		<dependencies>
+    <dependencies>
       <dependency>
-				<groupId>com.example.common</groupId>
-				<artifactId>util</artifactId>
-				<version>[1.0.0,)</version>
-			</dependency>
+        <groupId>com.example.common</groupId>
+        <artifactId>util</artifactId>
+        <version>[1.0.0,)</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.79</version>
+      </dependency>
     </dependencies>
-	</dependencyManagement>
+  </dependencyManagement>
 
   <build>
     <plugins>
-    <!-- 增加 gmavenplus 插件 允许集成Groovy到Maven-->
-      <plugin> 
-        <groupId>org.codehaus.gmavenplus</groupId>  
+      <!-- 增加 gmavenplus 插件 允许集成Groovy到Maven-->
+      <plugin>
+        <groupId>org.codehaus.gmavenplus</groupId>
         <artifactId>gmavenplus-plugin</artifactId>
         <version>1.13.1</version>
         <executions>
@@ -96,21 +86,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
-		<repository>
-			<id>central</id>
-			<name>aliyun maven</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-			<layout>default</layout>
-			<!-- 是否开启发布版构件下载 -->
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<!-- 是否开启快照版构件下载 -->
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 </project>
