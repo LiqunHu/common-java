@@ -189,11 +189,11 @@ public class DateUtil {
 	}
 
 	public static String formatDate(Date date) {
-		return formatDate(date, Constants.DATE_FORMAT_PATTERN_LINE);
+		return formatDate(date, "yyyy-MM-dd");
 	}
 
 	public static String formatDateTime(Date date) {
-		return formatDate(date, Constants.TIMESTAMP_FORMAT_PATTERN);
+		return formatDate(date, "yyyy-MM-dd HH:mm:ss");
 	}
 
 	public static String formatDateCompareToday(Date date) {

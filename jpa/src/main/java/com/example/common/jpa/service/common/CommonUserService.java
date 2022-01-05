@@ -8,15 +8,15 @@ import com.example.common.jpa.model.common.CommonUser;
 
 public interface CommonUserService extends BaseIntegerService<CommonUserDao, CommonUser> {
 
-	List<User> searchUser(String searchText, Integer pageNo, Integer pageSize);
+	List<CommonUser> searchUser(String searchText, Integer pageNo, Integer pageSize);
 
-	List<User> searchUser(String searchText);
+	List<CommonUser> searchUser(String searchText);
 
-	User findByUserId(String userId);
+	CommonUser findByUserId(String userId);
 
-	List<User> findByUserIdIn(String[] userIds);
+	List<CommonUser> findByUserIdIn(String[] userIds);
 
-	List<User> findByUserPhoneIn(List<String> phones);
+	List<CommonUser> findByUserPhoneIn(List<String> phones);
 
-	User findByUserPhone(String userPhone);
+	CommonUser findByUserPhone(String userPhone);
 }

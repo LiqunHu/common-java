@@ -21,7 +21,7 @@ public abstract class BaseServiceImpl<DAO extends BaseDao<T, ID>, T, ID> impleme
 	protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
 	protected PageRequest sortBy(Integer pageNo, Integer pageSize, Direction direction, String... properties) {
-		Sort sort = new Sort(direction, properties);
+		Sort sort = Sort.by(direction, properties);
 		return PageRequest.of(pageNo - 1, pageSize, sort);
 	}
 
