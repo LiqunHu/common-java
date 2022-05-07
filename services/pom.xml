@@ -31,9 +31,9 @@
     </dependency>
 
     <dependency>
-			<groupId>com.example.common</groupId>
-			<artifactId>util</artifactId>
-		</dependency>
+		<groupId>com.example.common</groupId>
+		<artifactId>util</artifactId>
+	</dependency>
 
 	</dependencies>
 
@@ -41,9 +41,9 @@
     <finalName>${project.name}</finalName>
     <plugins>
       <plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-maven-plugin</artifactId>
+	  </plugin>
       <!-- 增加 gmavenplus 插件 允许集成Groovy到Maven-->
       <plugin> 
         <groupId>org.codehaus.gmavenplus</groupId>  

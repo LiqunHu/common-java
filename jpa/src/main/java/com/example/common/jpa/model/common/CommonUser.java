@@ -4,12 +4,8 @@ import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.alibaba.fastjson.JSONObject;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -36,8 +32,8 @@ public class CommonUser extends BaseModel {
     }
 
     @Id
-	@Column(name = "user_id", columnDefinition = "COMMENT '用户主键id'")
-	private String userId;
+    @Column(name = "user_id", columnDefinition = "COMMENT '用户主键id'")
+    private String userId;
 
     @Column(name = "user_username")
     private String userUsername;
