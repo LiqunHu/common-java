@@ -6,39 +6,29 @@
 		<artifactId>common-java</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<artifactId>redis</artifactId>
-	<name>commons-redis</name>
-	<description>redis as tool</description>
+	<artifactId>auth</artifactId>
+	<name>commons-auth</name>
+	<description>auth server</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.example.common</groupId>
 			<artifactId>util</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.example.common</groupId>
+			<artifactId>redis</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-collections4</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
 		</dependency>
 	</dependencies>
 
