@@ -22,6 +22,9 @@ public interface Constants {
 
 	// mock mobile user password
 	String ERROR_MESSAGE = "ERROR_MESSAGE";
+	
+	// REQUEST URL
+	String ERROR_PATH = "/error";
 
 	String DATE_FORMAT_PATTERN_PURE = "yyyyMMdd";
 	String DATE_FORMAT_PATTERN_DOT = "yyyy.MM.dd";
